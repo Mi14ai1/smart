@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,6 +9,292 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+
+      <header class="header">
+        <div class="wrapper page__centerer">
+        <div class="logo header__logo">
+          <img src="img/logo.svg" alt="Smart Device умные технологии">
+          <div class="logo__words">
+            <p>Smart Device</p>
+            <p>умные технологии</p>
+          </div>
+        </div>
+        <div class="header__contacts">
+          <a href="mailto:info@sd.ru">info@sd.ru</a>
+          <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+        </div>
+        <button type="button" class="button header__callback-button button--callback">Заказать звонок</button>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="visually-hidden">Главная страница Smart Device</h1>
+        <section class="top__banner">
+        <div class="wrapper page__centerer">
+          <h2>Печатные платы</h2>
+          <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+          <a href="#">Получить бесплатную консультацию</a>
+        </div>
+      </section>
+      <section class="advantages">
+        <div class="wrapper page__centerer">
+          <h2 class="visually-hidden">Преимущества Smart Device</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages-card advantages-card--time">
+                <h3>Оперативные сроки</h3>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
+                  производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages-card advantages-card--suppliers">
+                <h3>Крупные поставщики</h3>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                  Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages-card advantages-card--confidential">
+                <h3>Полная конфиденциальность</h3>
+                <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages-card advantages-card--personal">
+                <h3>Персонализация стоимости</h3>
+                <p>Мы&nbsp;подбираем определенную фабрику, поставщиков, вид доставки,
+                  чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__year about-year">
+          <p>2022</p>
+        </div>
+        <div class="about__container">
+          <h2>О компании</h2>
+          <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем
+            мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.</p>
+          <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.<br />
+Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+          <button type="button" class="button about__button button--show-about">Подробнее</a>
+        </div>
+      </section>
+
+      <section class="services">
+        <div class="wrapper page__centerer">
+          <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <div class="services-card">
+                <a href="#">
+                <h3>Производство печатных плат</h3>
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                    srcset="img/sevices/development-l.webp 1x, img/sevices/development-l@2x.webp 2x"
+                  />
+                  <source
+                    media="(min-width: 767px) and (max-width: 1023px)"
+                    type="image/webp"
+                    srcset="img/sevices/development-m.webp 1x, img/sevices/development-m@2x.webp 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="img/sevices/development-s.webp 1x, img/sevices/development-s@2x.webp 2x"
+                  />
+                  <!--mobile-1x: 270px-->
+                  <!--mobile-2x: 540px-->
+                  <!--tablet-1x: 670px-->
+                  <!--tablet-2x: 1340px-->
+                  <!--desktop-1x: 350px-->
+                  <!--desktop-2x: 700px-->
+                  <img
+                    loading="lazy"
+                    srcset="img/sevices/development-l@2x.jpg 2x"
+                    src="img/sevices/development-l.jpg"
+                    alt="Производство печатных плат"
+                    width="350"
+                    height="650"
+                  />
+                </picture>
+                <a class="button services__button">прейти на страницу производства</a>
+                </a>
+              </div>
+              <div class="services-card">
+                <a href="#">
+                <h3>Монтаж печатных плат</h3>
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                    srcset="img/sevices/assembling-l.webp 1x, img/sevices/assembling-l@2x.webp 2x"
+                  />
+                  <source
+                    media="(min-width: 767px) and (max-width: 1023px)"
+                    type="image/webp"
+                    srcset="img/sevices/assembling-m.webp 1x, img/sevices/assembling-m@2x.webp 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="img/sevices/assembling-s.webp 1x, img/sevices/assembling-s@2x.webp 2x"
+                  />
+                  <!--mobile-1x: 270px-->
+                  <!--mobile-2x: 540px-->
+                  <!--tablet-1x: 670px-->
+                  <!--tablet-2x: 1340px-->
+                  <!--desktop-1x: 350px-->
+                  <!--desktop-2x: 700px-->
+                  <img
+                    loading="lazy"
+                    srcset="img/sevices/assembling-l@2x.jpg 2x"
+                    src="img/sevices/assembling-l.jpg"
+                    alt="Монтаж печатных плат"
+                    width="350"
+                    height="650"
+                  />
+                </picture>
+                <a class="button services__button">прейти на страницу монтажа</a>
+                </a>
+              </div>
+              <div class="services-card">
+                <a href="#">
+                <h3>Комплектующие для светотехники</h3>
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                    srcset="img/sevices/accessories-l.webp 1x, img/sevices/accessories-l@2x.webp 2x"
+                  />
+                  <source
+                    media="(min-width: 767px) and (max-width: 1023px)"
+                    type="image/webp"
+                    srcset="img/sevices/accessories-m.webp 1x, img/sevices/accessories-m@2x.webp 2x"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                    srcset="img/sevices/accessories-s.webp 1x, img/sevices/accessories-s@2x.webp 2x"
+                  />
+                  <!--mobile-1x: 270px-->
+                  <!--mobile-2x: 540px-->
+                  <!--tablet-1x: 670px-->
+                  <!--tablet-2x: 1340px-->
+                  <!--desktop-1x: 350px-->
+                  <!--desktop-2x: 700px-->
+                  <img
+                    loading="lazy"
+                    srcset="img/sevices/accessories-l@2x.jpg 2x"
+                    src="img/sevices/accessories-l.jpg"
+                    alt="Комплектующие для светотехники"
+                    width="350"
+                    height="650"
+                  />
+                </picture>
+                <a class="button services__button">прейти на страницу комплектующих</a>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="feedback">
+
+        <div class="wrapper page__centerer">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              type="image/webp"
+              srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x"
+            />
+            <!--desktop-1x: 350px-->
+            <!--desktop-2x: 700px-->
+            <img
+              loading="lazy"
+              srcset="img/airplane@2x.png 2x"
+              src="img/airplane.png"
+              alt="Производство печатных плат"
+              width="510"
+              height="285"
+            />
+          </picture>
+          <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
+          <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+        <form action="#" class="feedback__form">
+          <label for="name" class="form__label">
+            <input name="name"  type="text" placeholder="Имя">
+            <span class="visually-hidden">Имя</span>
+          </label>
+          <label for="phone" class="form__label">
+            <input name="phone"  type="tel" placeholder="Телефон">
+            <span class="visually-hidden">Телефон</span>
+          </label>
+          <label for="question" class="form__label">
+            <textarea name="question"  placeholder="Ваш вопрос"></textarea>
+            <span class="visually-hidden">Ваш вопрос</span>
+          </label>
+          <button type="submit" class="button form__submit">Задать вопрос</button>
+          <label for="convention" class="form__label">
+            <input type="checkbox" name="convention">
+            Я&nbsp;согласен на&nbsp;обработку персональных данных
+          </label>
+        </form>
+        </div>
+      </section>
+
+      </main>
+      <footer class="footer">
+        <div class="wrapper page__centerer">
+          <div class="logo header__logo">
+            <img src="img/logo.svg" alt="Smart Device умные технологии">
+            <div class="logo__words">
+              <p>Smart Device</p>
+              <p>умные технологии</p>
+            </div>
+          </div>
+          <div class="footer__social">
+          </div>
+          <nav class="navigation footer__navigation">
+            <h2>Разделы сайта</h2>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#">О Компаниии</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Продукты</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">О Производство печатных плат</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Монтаж печатных плат</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Комплектующие</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Доставка</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__contacts">
+            <h2>Наш офис</h2>
+            <p>г.&nbsp;Мытищи, Олимпийский проспект, д.10</p>
+            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+            <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+          </div>
+        </div>
+      </footer>
+
 
     <script src="js/main.min.js"></script>
   </body>
