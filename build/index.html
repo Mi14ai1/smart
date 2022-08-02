@@ -11,24 +11,32 @@
   <body>
 
       <header class="header">
-        <div class="wrapper page__centerer">
+        <div class="wrapper header__container page__centerer">
         <div class="logo header__logo">
           <img src="img/logo.svg" alt="Smart Device умные технологии">
-          <div class="logo__words">
+          <div class="logo__words header__logo-words">
             <p>Smart Device</p>
-            <p>умные технологии</p>
+            <span>умные технологии</span>
           </div>
         </div>
         <div class="header__contacts">
-          <a href="mailto:info@sd.ru">info@sd.ru</a>
-          <a href="tel:+74950005252">+7 (495) 000 52 52</a>
+          <a href="mailto:info@sd.ru">
+            <div class="contact contact--email">
+              <span>info@sd.ru</span>
+            </div>
+          </a>
+          <a href="tel:+74950005252">
+            <div class="contact contact--phone">
+              <span>+7 (495) 000 52 52</span>
+            </div>
+          </a>
         </div>
-        <button type="button" class="button header__callback-button button--callback">Заказать звонок</button>
+        <button type="button" class="button header__callback-button callback-button">Заказать звонок</button>
         </div>
       </header>
       <main class="main">
         <h1 class="visually-hidden">Главная страница Smart Device</h1>
-        <section class="top__banner">
+        <section class="top-banner">
         <div class="wrapper page__centerer">
           <h2>Печатные платы</h2>
           <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
@@ -79,10 +87,9 @@
             мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.</p>
           <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.<br />
 Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
-          <button type="button" class="button about__button button--show-about">Подробнее</a>
+          <button type="button" class="button about__button button--show-about">Подробнее</button>
         </div>
       </section>
-
       <section class="services">
         <div class="wrapper page__centerer">
           <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
@@ -95,17 +102,17 @@
                   <source
                     media="(min-width: 1024px)"
                     type="image/webp"
-                    srcset="img/sevices/development-l.webp 1x, img/sevices/development-l@2x.webp 2x"
+                    srcset="img/services/development-l.webp 1x, img/services/development-l@2x.webp 2x"
                   />
                   <source
                     media="(min-width: 767px) and (max-width: 1023px)"
                     type="image/webp"
-                    srcset="img/sevices/development-m.webp 1x, img/sevices/development-m@2x.webp 2x"
+                    srcset="img/services/development-m.webp 1x, img/services/development-m@2x.webp 2x"
                   />
                   <source
                     media="(max-width: 767px)"
                     type="image/webp"
-                    srcset="img/sevices/development-s.webp 1x, img/sevices/development-s@2x.webp 2x"
+                    srcset="img/services/development-s.webp 1x, img/services/development-s@2x.webp 2x"
                   />
                   <!--mobile-1x: 270px-->
                   <!--mobile-2x: 540px-->
@@ -115,15 +122,15 @@
                   <!--desktop-2x: 700px-->
                   <img
                     loading="lazy"
-                    srcset="img/sevices/development-l@2x.jpg 2x"
-                    src="img/sevices/development-l.jpg"
+                    srcset="img/services/development-l@2x.jpg 2x"
+                    src="img/services/development-l.jpg"
                     alt="Производство печатных плат"
                     width="350"
                     height="650"
                   />
                 </picture>
-                <a class="button services__button">прейти на страницу производства</a>
                 </a>
+                <a class="button services__button">прейти на страницу производства</a>
               </div>
               <div class="services-card">
                 <a href="#">
@@ -132,17 +139,17 @@
                   <source
                     media="(min-width: 1024px)"
                     type="image/webp"
-                    srcset="img/sevices/assembling-l.webp 1x, img/sevices/assembling-l@2x.webp 2x"
+                    srcset="img/services/assembling-l.webp 1x, img/services/assembling-l@2x.webp 2x"
                   />
                   <source
                     media="(min-width: 767px) and (max-width: 1023px)"
                     type="image/webp"
-                    srcset="img/sevices/assembling-m.webp 1x, img/sevices/assembling-m@2x.webp 2x"
+                    srcset="img/services/assembling-m.webp 1x, img/services/assembling-m@2x.webp 2x"
                   />
                   <source
                     media="(max-width: 767px)"
                     type="image/webp"
-                    srcset="img/sevices/assembling-s.webp 1x, img/sevices/assembling-s@2x.webp 2x"
+                    srcset="img/services/assembling-s.webp 1x, img/services/assembling-s@2x.webp 2x"
                   />
                   <!--mobile-1x: 270px-->
                   <!--mobile-2x: 540px-->
@@ -152,15 +159,15 @@
                   <!--desktop-2x: 700px-->
                   <img
                     loading="lazy"
-                    srcset="img/sevices/assembling-l@2x.jpg 2x"
-                    src="img/sevices/assembling-l.jpg"
+                    srcset="img/services/assembling-l@2x.jpg 2x"
+                    src="img/services/assembling-l.jpg"
                     alt="Монтаж печатных плат"
                     width="350"
                     height="650"
                   />
                 </picture>
-                <a class="button services__button">прейти на страницу монтажа</a>
                 </a>
+                <a class="button services__button">прейти на страницу монтажа</a>
               </div>
               <div class="services-card">
                 <a href="#">
@@ -169,17 +176,17 @@
                   <source
                     media="(min-width: 1024px)"
                     type="image/webp"
-                    srcset="img/sevices/accessories-l.webp 1x, img/sevices/accessories-l@2x.webp 2x"
+                    srcset="img/services/accessories-l.webp 1x, img/services/accessories-l@2x.webp 2x"
                   />
                   <source
                     media="(min-width: 767px) and (max-width: 1023px)"
                     type="image/webp"
-                    srcset="img/sevices/accessories-m.webp 1x, img/sevices/accessories-m@2x.webp 2x"
+                    srcset="img/services/accessories-m.webp 1x, img/services/accessories-m@2x.webp 2x"
                   />
                   <source
                     media="(max-width: 767px)"
                     type="image/webp"
-                    srcset="img/sevices/accessories-s.webp 1x, img/sevices/accessories-s@2x.webp 2x"
+                    srcset="img/services/accessories-s.webp 1x, img/services/accessories-s@2x.webp 2x"
                   />
                   <!--mobile-1x: 270px-->
                   <!--mobile-2x: 540px-->
@@ -189,15 +196,15 @@
                   <!--desktop-2x: 700px-->
                   <img
                     loading="lazy"
-                    srcset="img/sevices/accessories-l@2x.jpg 2x"
-                    src="img/sevices/accessories-l.jpg"
+                    srcset="img/services/accessories-l@2x.jpg 2x"
+                    src="img/services/accessories-l.jpg"
                     alt="Комплектующие для светотехники"
                     width="350"
                     height="650"
                   />
                 </picture>
-                <a class="button services__button">прейти на страницу комплектующих</a>
                 </a>
+                <a class="button services__button">прейти на страницу комплектующих</a>
               </div>
             </li>
           </ul>
@@ -227,43 +234,70 @@
           <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
         <form action="#" class="feedback__form">
           <label for="name" class="form__label">
-            <input name="name"  type="text" placeholder="Имя">
+            <input id="name" name="name"  type="text" placeholder="Имя">
             <span class="visually-hidden">Имя</span>
           </label>
           <label for="phone" class="form__label">
-            <input name="phone"  type="tel" placeholder="Телефон">
+            <input id="phone" name="phone"  type="tel" placeholder="Телефон">
             <span class="visually-hidden">Телефон</span>
           </label>
           <label for="question" class="form__label">
-            <textarea name="question"  placeholder="Ваш вопрос"></textarea>
+            <textarea id="question" name="question"  placeholder="Ваш вопрос"></textarea>
             <span class="visually-hidden">Ваш вопрос</span>
           </label>
           <button type="submit" class="button form__submit">Задать вопрос</button>
           <label for="convention" class="form__label">
-            <input type="checkbox" name="convention">
+            <input id="convention" type="checkbox" name="convention">
             Я&nbsp;согласен на&nbsp;обработку персональных данных
           </label>
         </form>
         </div>
       </section>
-
       </main>
+
       <footer class="footer">
-        <div class="wrapper page__centerer">
-          <div class="logo header__logo">
-            <img src="img/logo.svg" alt="Smart Device умные технологии">
-            <div class="logo__words">
-              <p>Smart Device</p>
-              <p>умные технологии</p>
+        <div class="wrapper footer__wrapper page__centerer">
+          <div class="footer__container">
+            <div class="logo footer__logo">
+              <img src="img/logo.svg" alt="Smart Device умные технологии">
+              <div class="logo__words">
+                <p>Smart Device</p>
+                <span>умные технологии</span>
             </div>
           </div>
-          <div class="footer__social">
+            <div class="footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="30" height="30">
+                      <use href="img/svg/social/social-sprite.svg#face-book"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="30" height="30">
+                      <use href="img/svg/social/social-sprite.svg#ok"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link">
+                    <svg width="30" height="30">
+                      <use href="img/svg/social/social-sprite.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
+
+
           <nav class="navigation footer__navigation">
             <h2>Разделы сайта</h2>
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="#">О Компаниии</a>
+                <a href="#">О Компании</a>
               </li>
               <li class="navigation__item">
                 <a href="#">Продукты</a>
