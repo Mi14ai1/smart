@@ -36,15 +36,15 @@
       </header>
       <main class="main">
         <h1 class="visually-hidden">Главная страница Smart Device</h1>
-        <section class="top-banner">
-        <div class="wrapper page__centerer">
+      <section class="top-banner">
+        <div class="wrapper top-banner__grid">
           <h2>Печатные платы</h2>
           <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
           <a href="#">Получить бесплатную консультацию</a>
         </div>
       </section>
       <section class="advantages">
-        <div class="wrapper page__centerer">
+        <div class="wrapper advantages__container">
           <h2 class="visually-hidden">Преимущества Smart Device</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -232,7 +232,7 @@
           </picture>
           <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
           <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-        <form action="#" class="feedback__form">
+        <form action="#" class="feedback__form form">
           <label for="name" class="form__label">
             <input id="name" name="name"  type="text" placeholder="Имя">
             <span class="visually-hidden">Имя</span>
@@ -292,39 +292,42 @@
             </div>
           </div>
 
-
-          <nav class="navigation footer__navigation">
-            <h2>Разделы сайта</h2>
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a href="#">О Компании</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">Продукты</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">О Производство печатных плат</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">Монтаж печатных плат</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">Комплектующие</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">Доставка</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="footer__contacts">
-            <h2>Наш офис</h2>
-            <p>г.&nbsp;Мытищи, Олимпийский проспект, д.10</p>
-            <a href="tel:+74955894050">+7 (495) 589-40-50</a>
-            <a href="tel:+79253895829">+7 (925) 389-58-29</a>
-            <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+          <div class="accordion footer__accordion">
+            <button type="button" class="button accordion__control accordion__control--navigation">Разделы сайта</button>
+            <nav class="navigation footer__navigation">
+              <h2>Разделы сайта</h2>
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#">О Компании</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">Продукты</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">О Производство печатных плат</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">Монтаж печатных плат</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">Комплектующие</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">Доставка</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <button type="button" class="button accordion__control accordion__control--contacts">Наш офис</button>
+            <div class="footer__contacts footer-contacts">
+              <h2>Наш офис</h2>
+              <p>г.&nbsp;Мытищи, Олимпийский проспект, д.10</p>
+              <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              <a href="tel:+79253895829">+7 (925) 389-58-29</a>
+              <a href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </div>
           </div>
         </div>
       </footer>
