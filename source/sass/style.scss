@@ -10,10 +10,24 @@
 
 @import "variables";
 @import "global/fonts";
+@import "global/wrapper";
+@import "global/visually-hidden";
 
 // Blocks
 // ---------------------------------
-
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/contact";
+@import "blocks/callback-button";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/navigation";
+@import "blocks/accordion";
+@import "blocks/footer-contacts";
+@import "blocks/top-banner";
+@import "blocks/advantages";
+@import "blocks/advantages-card";
 
 // ---------------------------------
 

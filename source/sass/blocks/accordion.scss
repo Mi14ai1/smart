@@ -1,0 +1,5 @@
+.accordion__control {
+  @media #{$not-narrow-vp} {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.social {
+  max-width: 150px;
+}
+
+.social a {
+  display: block;
+  line-height: 0;
+  padding: 5px;
+}
+
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  gap: 15px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

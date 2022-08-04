@@ -1,0 +1,36 @@
+.contact {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 15px;
+  padding: 8px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 20px;
+    background: $color-deep-sky-blue;
+
+    @media #{$not-wide-vp} {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--email::before {
+    mask: no-repeat center / cover url("../img/svg/contacts-sprite.svg#email");
+  }
+
+  &--phone::before {
+    mask: no-repeat center / cover url("../img/svg/contacts-sprite.svg#phone");
+  }
+}
+
+.contact span {
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $color-alice-blue;
+  text-decoration: none;
+}

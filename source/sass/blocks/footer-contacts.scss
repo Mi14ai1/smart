@@ -1,0 +1,23 @@
+.footer-contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  h2 {
+    font-family: $ff-roboto-condensed;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: $color-default-white;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p,
+  a {
+    font-family: $ff-pt-mono;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    text-decoration: none;
+  }
+}
