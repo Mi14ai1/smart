@@ -1,11 +1,23 @@
+.navigation {
+  display: grid;
+  align-items: flex-start;
+
+  @media #{$wide-vp} {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
 .navigation h2 {
+  grid-column: 1 / -1;
   font-family: $ff-roboto-condensed;
   font-size: 15px;
   line-height: 16px;
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 0.8px;
   color: $color-default-white;
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 
 .navigation a {
@@ -19,15 +31,11 @@
 
 .navigation__list {
   display: grid;
-  grid-template: repeat(4, min-content) / repeat(2, 220px);
+  grid-template-rows: 1fr;
   column-gap: 30px;
-  row-gap: 10px;
-  grid-auto-flow: column dense;
+  row-gap: 9px;
   list-style: none;
+  max-width: 220px;
   margin: 0;
   padding: 0;
-}
-
-.navigation__item {
-  word-break: break-all;
 }

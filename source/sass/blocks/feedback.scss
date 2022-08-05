@@ -11,15 +11,19 @@
       width: 100%;
       height: 100%;
       background: $color-transparent-black-perl;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 87vw - -10px), 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 87vw + 12px), 0 100%);
       z-index: -1;
     }
   }
 }
 
+.feedback__wrapper {
+  padding: 165px 40px 20px;
+}
+
 .feedback img {
   position: absolute;
-  top: 245px;
+  top: 246px;
   left: 350px;
 
   @media #{$not-wide-vp} {

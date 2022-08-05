@@ -10,8 +10,43 @@
 
 .footer__accordion {
   display: flex;
+  margin-left: auto;
+  padding-right: 37px;
+  padding-top: 8px;
+
+  @media #{$middle-vp} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.footer__navigation {
+  margin-right: 30px;
 }
 
 .footer__logo {
   margin-bottom: 30px;
+}
+
+.footer__container {
+  @media #{$middle-vp} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.footer__social {
+  padding-left: 10px;
+
+  @media #{$middle-vp} {
+    justify-self: flex-end;
+  }
+}
+
+.footer__contacts {
+  @media #{$middle-vp} {
+    justify-self: flex-end;
+  }
 }
