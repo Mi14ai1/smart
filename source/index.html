@@ -274,8 +274,7 @@
             <source
               media="(min-width: 1024px)"
               type="image/webp"
-              srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x"
-            />
+              srcset="img/airplane.webp 1x, img/airplane@2x.webp 2x"/>
             <!--desktop-1x: 350px-->
             <!--desktop-2x: 700px-->
             <img
@@ -284,29 +283,28 @@
               src="img/airplane.png"
               alt="Производство печатных плат"
               width="510"
-              height="285"
-            />
+              height="285"/>
           </picture>
           <div class="feedback-form">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
             <form action="#" class="feedback__form form">
-              <label for="name" class="form__label">
+              <label for="name" class="feedback-form__label">
                 <input id="name" name="name" type="text" placeholder="Имя" />
                 <span class="visually-hidden">Имя</span>
               </label>
-              <label for="phone" class="form__label">
+              <label for="phone" class="feedback-form__label">
                 <input id="phone" name="phone" type="tel" placeholder="Телефон" />
                 <span class="visually-hidden">Телефон</span>
               </label>
               <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
-              <label for="question" class="form__label">
+              <label for="question" class="feedback-form__label">
                 <span class="visually-hidden">Ваш вопрос</span>
               </label>
               <button type="submit" class="button form__submit">Задать вопрос</button>
-              <label for="convention" class="form__label">
+              <label for="convention" class="feedback-form__label feedback-form__label--convention">
                 <input id="convention" type="checkbox" name="convention" />
-                Я&nbsp;согласен на&nbsp;обработку персональных данных
+                <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
               </label>
             </form>
           </div>
@@ -364,11 +362,13 @@
                 <a href="#">Продукты</a>
               </li>
               <li class="navigation__item">
-                <a href="#">О Производство печатных плат</a>
+                <a href="#">Производство печатных плат</a>
               </li>
               <li class="navigation__item">
                 <a href="#">Монтаж печатных плат</a>
               </li>
+            </ul>
+            <ul class="navigation__list">
               <li class="navigation__item">
                 <a href="#">Комплектующие</a>
               </li>

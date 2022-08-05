@@ -1,0 +1,75 @@
+.about {
+  padding: 61px 0 100px;
+}
+
+.about__wrapper {
+  position: relative;
+  min-height: 320px;
+
+  @media #{$wide-vp} {
+    padding-left: 280px;
+  }
+
+  @media #{$middle-vp} {
+    padding: 0 50px;
+  }
+}
+
+.about__year {
+  position: absolute;
+  top: 53px;
+  left: -38px;
+
+  @media #{$narrow-vp} {
+    transform: scale(0);
+  }
+}
+
+.about p {
+  font-family: $ff-pt-mono;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $color-black-perl;
+  margin: 0 0 21px;
+}
+
+.about h2 {
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  color: $color-black-perl;
+  margin: 0 0 13px;
+}
+
+.about__button {
+  font-family: $ff-roboto-condensed;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  letter-spacing: 0.8px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px $color-deep-sky-blue;
+  padding: 10px;
+  min-height: 45px;
+  width: 180px;
+}
+
+.about__text-container {
+  height: 240px;
+  overflow-y: hidden;
+  margin-bottom: 15px;
+
+  @media #{$middle-vp} {
+    max-width: 495px;
+    margin-left: auto;
+  }
+}
+
+.about__show-text {
+  height: 600px;
+  overflow: initial;
+}

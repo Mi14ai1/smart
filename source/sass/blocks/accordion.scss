@@ -1,3 +1,11 @@
+.accordion {
+  align-items: flex-start;
+
+  @media #{$wide-vp} {
+    padding-left: 20px;
+  }
+}
+
 .accordion__control {
   @media #{$not-narrow-vp} {
     display: none;
