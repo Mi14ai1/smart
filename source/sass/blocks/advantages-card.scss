@@ -4,7 +4,7 @@
   line-height: 34px;
   font-weight: 400;
   color: $color-deep-sky-blue;
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
 
   @media #{$narrow-vp} {
     font-size: 20px;
@@ -28,11 +28,11 @@
 
 .advantages-card {
   box-sizing: border-box;
-  max-width: 595px;
-  min-height: 300px;
+  max-width: 597px;
+  min-height: 302px;
   height: 100%;
   padding: 40px 45px 35px;
-  box-shadow: inset 0 0 0 1px $advantages-border-color, inset 5px 0 0 0 $color-deep-sky-blue;
+  box-shadow: inset 0 0 0 1px $advantages-border-color, inset 6px 0 0 0 $color-deep-sky-blue;
 
   &::before {
     content: "";
@@ -49,8 +49,18 @@
     }
   }
 
+  &--time {
+    padding-top: 41px;
+    padding-left: 46px;
+  }
+
   &--time::before {
     mask: no-repeat center /cover url("../img/svg/advantages-sprite.svg#time");
+  }
+
+  &--suppliers {
+    padding-top: 42px;
+    padding-left: 47px;
   }
 
   &--suppliers::before {
@@ -58,7 +68,13 @@
   }
 
   &--confidential::before {
+    margin-left: -4px;
     mask: no-repeat center /cover url("../img/svg/advantages-sprite.svg#confidential");
+  }
+
+  &--personal {
+    margin-left: 1px;
+    padding-left: 46px;
   }
 
   &--personal::before {
