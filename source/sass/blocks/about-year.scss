@@ -14,11 +14,11 @@
   }
 
   @media #{$middle-vp} {
-    background: no-repeat center / auto auto url("../img/yearbackground-m.jpg");
+    background: no-repeat center / auto auto url("../img/yearbackground-l.jpg");
     background-clip: text;
 
     @media (min-resolution: $retina-dppx) {
-      background: no-repeat center / auto 54% url("../img/yearbackground-m@2x.jpg");
+      background: no-repeat center / auto 52.5% url("../img/yearbackground-l@2x.jpg");
 
       background-clip: text;
     }

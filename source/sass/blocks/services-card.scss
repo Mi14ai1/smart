@@ -25,6 +25,12 @@
   color: $color-default-white;
   margin: 0;
   max-width: calc(100% - 180px);
+
+  @media #{$middle-vp} {
+    top: 37px;
+    left: 45px;
+    max-width: 148px;
+  }
 }
 
 .services-card__button {
@@ -47,6 +53,10 @@
     height: 8px;
     border-right: solid 1px $color-default-white;
     border-bottom: solid 1px $color-default-white;
+  }
+
+  @media #{$middle-vp} {
+    right: 0;
   }
 }
 

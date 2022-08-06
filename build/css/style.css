@@ -430,6 +430,11 @@ template {
   transform: scale(0);
 }
 
+.page {
+  scroll-snap-align: top;
+  scroll-behavior: smooth;
+}
+
 .button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -681,6 +686,10 @@ template {
   padding: 0;
 }
 
+.navigation__list + .navigation__list {
+  margin-top: 9px;
+}
+
 .accordion {
   -webkit-box-align: start;
   -ms-flex-align: start;
@@ -729,9 +738,6 @@ template {
   box-sizing: border-box;
   min-height: 880px;
   padding-top: 305px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
 }
 
 .top-banner__grid {
@@ -860,18 +866,12 @@ template {
   margin-bottom: 22px;
 }
 
-.advantages-card--time {
-  padding-top: 41px;
-  padding-left: 46px;
-}
-
 .advantages-card--time::before {
   -webkit-mask: no-repeat center/cover url("../img/svg/advantages-sprite.svg#time");
   mask: no-repeat center/cover url("../img/svg/advantages-sprite.svg#time");
 }
 
 .advantages-card--suppliers {
-  padding-top: 42px;
   padding-left: 47px;
 }
 
@@ -939,7 +939,7 @@ template {
   line-height: 51px;
   font-weight: 400;
   color: #041827;
-  margin: 0 0 13px;
+  margin: 0 0 12px;
 }
 
 .about__button {
@@ -1141,7 +1141,6 @@ template {
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 35px;
-  padding-left: 4px;
 }
 
 .feedback-form input,
@@ -1333,8 +1332,23 @@ template {
     padding-left: 20px;
   }
 
+  .top-banner {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l.jpg"), #041827;
+  }
+
   .top-banner__grid {
     padding-left: 155px;
+  }
+
+  .advantages-card--suppliers {
+    padding-top: 42px;
+  }
+
+  .advantages-card--time {
+    padding-top: 41px;
+    padding-left: 46px;
   }
 
   .about__wrapper {
@@ -1365,9 +1379,19 @@ template {
   .feedback-form {
     margin-left: auto;
   }
+
+  .feedback-form p {
+    padding-left: 4px;
+  }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .top-banner {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
+    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
+    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
+  }
+
   .about-year {
     background: no-repeat center/auto 54% url("../img/yearbackground-l@2x.jpg");
     -webkit-background-clip: text;
@@ -1376,14 +1400,12 @@ template {
 }
 
 @media (max-width: 1023px) {
-  .header__contacts span {
-    position: absolute;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+  .header__contacts {
+    padding-top: 2px;
+    gap: 9px;
   }
 
-  .header__logo-words {
+  .header__contacts span {
     position: absolute;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -1397,6 +1419,10 @@ template {
   .contact::before {
     width: 20px;
     height: 20px;
+  }
+
+  .advantages-card p {
+    margin-bottom: 0;
   }
 
   .services__list {
@@ -1415,6 +1441,13 @@ template {
 }
 
 @media (max-width: 767px) {
+  .header__logo-words {
+    position: absolute;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
   .header__logo img {
     width: 35px;
     height: 35px;
@@ -1479,6 +1512,18 @@ template {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .header__container {
+    padding: 20px 64px 25px 50px;
+  }
+
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 50px;
+  }
+
   .footer__accordion {
     display: -ms-grid;
     display: grid;
@@ -1486,6 +1531,7 @@ template {
     grid-template-columns: 1fr 1fr;
     margin: 0;
     padding: 0;
+    gap: 30px;
   }
 
   .footer__container {
@@ -1493,49 +1539,198 @@ template {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 7px;
   }
 
   .footer__social {
     justify-self: flex-end;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding-top: 5px;
+    margin-right: -5px;
   }
 
   .footer__contacts {
     justify-self: flex-end;
+    width: 100%;
   }
 
   .top-banner {
+    min-height: 640px;
     padding-top: 180px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-m.jpg"), #041827;
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-m.jpg"), #041827;
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-m.jpg"), #041827;
   }
 
+  .top-banner__grid {
+    padding: 0 50px;
+  }
+
   .top-banner h2 {
     font-size: 64px;
     line-height: 75px;
+    letter-spacing: 4.5px;
+    margin: 0;
+  }
+
+  .top-banner p {
+    margin-bottom: 55px;
   }
 
   .top-banner a {
-    margin-right: 45px;
+    letter-spacing: 0.9px;
+    padding: 16px 20px 15px 27px;
+    margin-left: 45px;
+  }
+
+  .advantages {
+    padding: 80px 0 44px;
+  }
+
+  .advantages__container {
+    padding: 0 49px;
+  }
+
+  .advantages__list {
+    -webkit-column-gap: 26px;
+    -moz-column-gap: 26px;
+    column-gap: 26px;
+  }
+
+  .advantages-card h3 {
+    margin-bottom: 8px;
+  }
+
+  .advantages-card::before {
+    margin-bottom: 16px;
+  }
+
+  .advantages-card--time::before {
+    margin-bottom: 16px;
+    padding-left: 2px;
+  }
+
+  .advantages-card--confidential::before {
+    margin-left: 1px;
+    margin-top: -1px;
+    margin-bottom: 14px;
+  }
+
+  .advantages-card--personal h3 {
+    margin-bottom: 4px;
+  }
+
+  .advantages-card--personal::before {
+    margin-bottom: 10px;
+  }
+
+  .advantages-card {
+    min-height: 360px;
+    padding-bottom: 22px;
+  }
+
+  .advantages-card--time {
+    max-width: 322px;
+    padding-top: 41px;
+    padding-bottom: 53px;
+    margin-top: -1px;
+  }
+
+  .about {
+    padding: 30px 0 80px;
   }
 
   .about__wrapper {
     padding: 0 50px;
   }
 
+  .about__year {
+    top: 57px;
+    left: -21px;
+  }
+
+  .about__button {
+    margin-left: 175px;
+  }
+
   .about__text-container {
+    height: 325px;
     max-width: 495px;
     margin-left: auto;
   }
 
   .about-year {
-    background: no-repeat center/auto auto url("../img/yearbackground-m.jpg");
+    background: no-repeat center/auto auto url("../img/yearbackground-l.jpg");
     -webkit-background-clip: text;
     background-clip: text;
   }
 
+  .services {
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  .services__wrapper {
+    padding: 0 50px;
+  }
+
+  .services h2 {
+    margin-bottom: 38px;
+  }
+
+  .services-card h3 {
+    top: 37px;
+    left: 45px;
+    max-width: 148px;
+  }
+
+  .services-card__button {
+    right: 0;
+  }
+
+  .feedback {
+    min-height: 580px;
+  }
+
+  .feedback__wrapper {
+    padding: 45px 50px 20px;
+  }
+
   .feedback-form {
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .feedback-form h2 {
+    margin-bottom: 7px;
+  }
+
+  .feedback-form p {
+    margin-bottom: 25px;
+  }
+
+  .feedback-form form {
+    padding: 0;
+  }
+
+  .feedback-form__label--convention {
+    padding-top: 10px;
+    padding-left: 25px;
+  }
+
+  .feedback-form textarea {
+    padding-top: 30px;
+  }
+
+  .feedback-form button {
+    padding: 16px 5px 10px;
+  }
+
+  .feedback-form input[type="checkbox"] {
+    left: 0;
+    top: 17px;
   }
 }
 
@@ -1547,16 +1742,8 @@ template {
   }
 
   .about-year {
-    background: no-repeat center/auto 54% url("../img/yearbackground-m@2x.jpg");
+    background: no-repeat center/auto 52.5% url("../img/yearbackground-l@2x.jpg");
     -webkit-background-clip: text;
     background-clip: text;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .top-banner {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
-    background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
-    background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-l@2x.jpg"), #041827;
   }
 }

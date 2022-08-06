@@ -39,3 +39,7 @@
   margin: 0;
   padding: 0;
 }
+
+.navigation__list + .navigation__list {
+  margin-top: 9px;
+}
