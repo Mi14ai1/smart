@@ -6,6 +6,10 @@
   color: $color-deep-sky-blue;
   margin: 0 0 12px 0;
 
+  @media #{$middle-vp} {
+    margin-bottom: 8px;
+  }
+
   @media #{$narrow-vp} {
     font-size: 20px;
     line-height: 28px;
@@ -19,6 +23,10 @@
   font-weight: 400;
   color: $color-black-perl;
   margin: 0 0 20px 0;
+
+  @media #{$not-wide-vp} {
+    margin-bottom: 0;
+  }
 
   @media #{$narrow-vp} {
     font-size: 14px;
@@ -43,24 +51,31 @@
 
     margin-bottom: 22px;
 
+    @media #{$middle-vp} {
+      margin-bottom: 16px;
+    }
+
     @media #{$narrow-vp} {
       width: 30px;
       height: 30px;
     }
   }
 
-  &--time {
-    padding-top: 41px;
-    padding-left: 46px;
-  }
 
   &--time::before {
+    @media #{$middle-vp} {
+      margin-bottom: 16px;
+      padding-left: 2px;
+    }
     mask: no-repeat center /cover url("../img/svg/advantages-sprite.svg#time");
   }
 
   &--suppliers {
-    padding-top: 42px;
     padding-left: 47px;
+
+    @media #{$wide-vp} {
+      padding-top: 42px;
+    }
   }
 
   &--suppliers::before {
@@ -70,15 +85,31 @@
   &--confidential::before {
     margin-left: -4px;
     mask: no-repeat center /cover url("../img/svg/advantages-sprite.svg#confidential");
+
+    @media #{$middle-vp} {
+      margin-left: 1px;
+      margin-top: -1px;
+      margin-bottom: 14px;
+    }
   }
 
   &--personal {
     margin-left: 1px;
     padding-left: 46px;
+
+    @media #{$middle-vp} {
+      h3 {
+        margin-bottom: 4px;
+      }
+    }
   }
 
   &--personal::before {
     mask: no-repeat center /cover url("../img/svg/advantages-sprite.svg#personal");
+
+    @media #{$middle-vp} {
+      margin-bottom: 10px;
+    }
   }
 
   &:hover {
@@ -91,6 +122,25 @@
     h3,
     p {
       color: $color-default-white;
+    }
+  }
+
+  @media #{$middle-vp} {
+    min-height: 360px;
+    padding-bottom: 22px;
+  }
+
+  &--time {
+    @media #{$wide-vp} {
+      padding-top: 41px;
+      padding-left: 46px;
+    }
+
+    @media #{$middle-vp} {
+      max-width: 322px;
+      padding-top: 41px;
+      padding-bottom: 53px;
+      margin-top: -1px;
     }
   }
 }

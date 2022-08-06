@@ -15,10 +15,18 @@
       z-index: -1;
     }
   }
+
+  @media #{$middle-vp} {
+    min-height: 580px;
+  }
 }
 
 .feedback__wrapper {
   padding: 165px 40px 20px;
+
+  @media #{$middle-vp} {
+    padding: 45px 50px 20px;
+  }
 }
 
 .feedback img {

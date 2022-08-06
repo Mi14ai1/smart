@@ -12,6 +12,10 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 30px 90px 35px 30px;
+
+  @media #{$middle-vp} {
+    padding: 20px 64px 25px 50px;
+  }
 }
 
 .header__contacts {
@@ -22,6 +26,9 @@
   margin-right: -7px;
 
   @media #{$not-wide-vp} {
+    padding-top: 2px;
+    gap: 9px;
+
     span {
       position: absolute;
       transform: scale(0);
@@ -30,7 +37,7 @@
 }
 
 .header__logo-words {
-  @media #{$not-wide-vp} {
+  @media #{$narrow-vp} {
     position: absolute;
     transform: scale(0);
   }
