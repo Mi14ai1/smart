@@ -22,6 +22,7 @@
   }
 
   @media #{$narrow-vp} {
+    min-height: 560px;
     padding-top: 150px;
     background: $top-banner-gradient, no-repeat center / cover url("../img/main/topbackground-s.jpg"), $color-black-perl;
 
@@ -41,6 +42,10 @@
 
   @media #{$middle-vp} {
     padding: 0 50px;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 0 25px;
   }
 }
 
@@ -70,6 +75,8 @@
   @media #{$narrow-vp} {
     font-size: 36px;
     line-height: 42px;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
   }
 }
 
@@ -90,6 +97,8 @@
   @media #{$narrow-vp} {
     font-size: 14px;
     line-height: 22px;
+    margin-left: -1px;
+    margin-bottom: 44px;
   }
 }
 
@@ -127,5 +136,22 @@
   @media #{$narrow-vp} {
     font-size: 14px;
     line-height: 17px;
+    letter-spacing: 0.7px;
+    min-height: 40px;
+    padding: 12px 5px 5px 38px;
+  }
+}
+
+.top-banner__button-text {
+  &--mobile {
+    display: none;
+  }
+
+  @media #{$narrow-vp} {
+    display: none;
+
+    &--mobile {
+      display: inline;
+    }
   }
 }

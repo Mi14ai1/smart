@@ -16,6 +16,10 @@
   @media #{$middle-vp} {
     padding: 20px 64px 25px 50px;
   }
+
+  @media #{$narrow-vp} {
+    padding: 15px 29px 20px 26px;
+  }
 }
 
 .header__contacts {
@@ -32,7 +36,14 @@
     span {
       position: absolute;
       transform: scale(0);
+      left: 0;
+      top: 0;
     }
+  }
+
+  @media #{$narrow-vp} {
+    padding: 0;
+    margin-top: -3px;
   }
 }
 
@@ -40,6 +51,8 @@
   @media #{$narrow-vp} {
     position: absolute;
     transform: scale(0);
+    left: 0;
+    top: 0;
   }
 }
 

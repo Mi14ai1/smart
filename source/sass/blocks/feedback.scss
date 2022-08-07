@@ -19,6 +19,10 @@
   @media #{$middle-vp} {
     min-height: 580px;
   }
+
+  @media #{$narrow-vp} {
+    min-height: 750px;
+  }
 }
 
 .feedback__wrapper {
@@ -26,6 +30,10 @@
 
   @media #{$middle-vp} {
     padding: 45px 50px 20px;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 47px 25px 20px;
   }
 }
 

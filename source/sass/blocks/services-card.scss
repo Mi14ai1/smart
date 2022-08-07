@@ -31,6 +31,14 @@
     left: 45px;
     max-width: 148px;
   }
+
+  @media #{$narrow-vp} {
+    font-size: 18px;
+    line-height: 30px;
+    top: 26px;
+    left: 30px;
+    max-width: 134px;
+  }
 }
 
 .services-card__button {
@@ -53,10 +61,20 @@
     height: 8px;
     border-right: solid 1px $color-default-white;
     border-bottom: solid 1px $color-default-white;
+
+    @media #{$narrow-vp} {
+      width: 4px;
+      height: 4px;
+    }
   }
 
-  @media #{$middle-vp} {
+  @media #{$not-wide-vp} {
     right: 0;
+  }
+
+  @media #{$narrow-vp} {
+    width: 40px;
+    height: 40px;
   }
 }
 
