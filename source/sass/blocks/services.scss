@@ -72,7 +72,8 @@
   margin: 0;
 
   @media #{$wide-vp} {
-    gap: calc(100% / 14.3);
+    column-gap: calc(100% / 14.3);
+    row-gap: 20px;
   }
 
   @media #{$not-wide-vp} {

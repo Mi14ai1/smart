@@ -445,6 +445,19 @@ template {
   cursor: pointer;
 }
 
+.button:hover {
+  opacity: 0.8;
+}
+
+.button:active {
+  opacity: 0.3;
+}
+
+.button:focus-visible {
+  -webkit-box-shadow: inset 0 0 0 2px #ffffff;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -453,7 +466,7 @@ template {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  z-index: 1000;
+  z-index: 10;
 }
 
 .header__container {
@@ -591,7 +604,7 @@ template {
 }
 
 .footer {
-  padding: 50px 0 55px;
+  padding: 50px 0 42px;
   background: #041827;
 }
 
@@ -688,14 +701,83 @@ template {
   padding: 0;
 }
 
-.navigation__list + .navigation__list {
-  margin-top: 9px;
-}
-
 .accordion {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+}
+
+.accordion__control {
+  position: relative;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-align: start;
+  color: #ffffff;
+  min-height: 61px;
+  width: 100%;
+  padding: 0;
+}
+
+.accordion__control::before {
+  content: "";
+  position: absolute;
+  left: calc(-100vw - 25px);
+  width: 100vw;
+  height: 1px;
+  background: rgba(248, 253, 255, 0.7);
+  -webkit-box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+  box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+  top: 0;
+}
+
+.accordion__control .accordion__control-mark::before {
+  opacity: 0;
+}
+
+.accordion__control-mark {
+  position: relative;
+  display: block;
+}
+
+.accordion__control-mark::after,
+.accordion__control-mark::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  background: #f8fdff;
+  right: 1px;
+  top: 5px;
+}
+
+.accordion__control-mark::before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion__control--hide-section {
+  margin-bottom: -1px;
+}
+
+.accordion__control--hide-section .accordion__control-mark::before {
+  opacity: 1;
+}
+
+.accordion__control--hide-section:last-of-type::after {
+  content: "";
+  position: absolute;
+  left: calc(-100vw - 25px);
+  width: 100vw;
+  height: 1px;
+  background: rgba(248, 253, 255, 0.7);
+  -webkit-box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+  box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+  bottom: 0;
 }
 
 .footer-contacts {
@@ -1215,7 +1297,7 @@ template {
   row-gap: 20px;
 }
 
-.feedback-form__label {
+.feedback-form label {
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -1223,8 +1305,9 @@ template {
   color: #ffffff;
 }
 
-.feedback-form__label--convention {
+.feedback-form__convention {
   position: relative;
+  display: block;
   padding-left: 36px;
   padding-top: 15px;
   -ms-grid-column: 2;
@@ -1310,6 +1393,118 @@ template {
   border-top: solid 1px #ffffff;
 }
 
+.feedback-form input[type="checkbox"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 16, 27, 0.7);
+  z-index: 11;
+  padding-top: 146px;
+}
+
+.modal__feedback {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 500px;
+  min-height: 610px;
+  padding: 37px 40px 40px;
+  margin: 0 auto;
+  background: #00b3ff;
+  border-radius: 3px;
+  -webkit-transform: translateX(-8px);
+  -ms-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+.modal__feedback form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.modal__feedback input {
+  margin-bottom: 20px;
+}
+
+.modal__feedback textarea {
+  margin-bottom: 25px;
+}
+
+.modal__feedback .modal__feedback-submit {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal__feedback input[type="checkbox"] {
+  top: 0;
+  left: 9px;
+}
+
+.modal__feedback .modal__feedback-convention {
+  padding-top: 0;
+  padding-left: 34px;
+}
+
+.modal__feedback h2 {
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 4px;
+}
+
+.modal .modal__close-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  padding: 0;
+  outline: none;
+}
+
+.modal .modal__close-button::before,
+.modal .modal__close-button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 5px;
+  width: 27px;
+  height: 1px;
+  background: #ffffff;
+}
+
+.modal .modal__close-button::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.modal .modal__close-button::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.modal .modal__close-button:focus-visible {
+  -webkit-box-shadow: inset 0 0 0 2px #ffffff;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -1375,7 +1570,10 @@ template {
   }
 
   .services__list {
-    gap: calc(100% / 14.3);
+    -webkit-column-gap: calc(100% / 14.3);
+    -moz-column-gap: calc(100% / 14.3);
+    column-gap: calc(100% / 14.3);
+    row-gap: 20px;
   }
 
   .feedback::before {
@@ -1395,6 +1593,11 @@ template {
 
   .feedback-form p {
     padding-left: 4px;
+  }
+
+  .modal__feedback p {
+    padding-left: 0;
+    margin-bottom: 38px;
   }
 }
 
@@ -1487,12 +1690,42 @@ template {
     height: 35px;
   }
 
+  .footer {
+    padding-bottom: 35px 0 35;
+  }
+
   .footer__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 0;
+    padding: 0 25px;
+  }
+
+  .footer__logo {
+    margin-bottom: 15px;
+  }
+
+  .footer__container {
+    padding-left: 25px;
+    margin-bottom: 24px;
+  }
+
+  .footer__social {
+    padding-left: 37px;
+  }
+
+  .navigation h2 {
+    position: absolute;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    left: 0;
+    top: 0;
+  }
+
+  .navigation__list + .navigation__list {
+    margin-top: 9px;
   }
 
   .accordion {
@@ -1503,6 +1736,57 @@ template {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .accordion__section {
+    position: relative;
+  }
+
+  .accordion__section::after {
+    content: "";
+    position: absolute;
+    left: calc(-100vw - 25px);
+    width: 100vw;
+    height: 1px;
+    background: rgba(248, 253, 255, 0.7);
+    -webkit-box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+    box-shadow: 100vw 0 0 0 rgba(248, 253, 255, 0.7);
+    bottom: 0;
+  }
+
+  .accordion__control--hide-section + .accordion__section {
+    position: absolute;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    top: 0;
+    left: 0;
+  }
+
+  .footer-contacts h2 {
+    position: absolute;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    left: 0;
+    top: 0;
+  }
+
+  .footer-contacts a {
+    letter-spacing: -1.3px;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: -5px;
+    margin-bottom: 19px;
+  }
+
+  .footer-contacts {
+    padding-bottom: 8px;
   }
 
   .top-banner {
@@ -1557,6 +1841,7 @@ template {
   }
 
   .advantages__list {
+    justify-items: center;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1723,7 +2008,7 @@ template {
     row-gap: 0;
   }
 
-  .feedback-form__label--convention {
+  .feedback-form__convention {
     padding-top: 5px;
     padding-left: 30px;
   }
@@ -1760,6 +2045,10 @@ template {
 @media (min-width: 768px) and (max-width: 1023px) {
   .header__container {
     padding: 20px 64px 25px 50px;
+  }
+
+  .footer {
+    padding: 50px 0 63px;
   }
 
   .footer__wrapper {
@@ -1953,7 +2242,7 @@ template {
     margin-bottom: 25px;
   }
 
-  .feedback-form__label--convention {
+  .feedback-form__convention {
     padding-top: 10px;
     padding-left: 25px;
   }
