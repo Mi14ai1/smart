@@ -428,6 +428,8 @@ template {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+  left: 0;
+  top: 0;
 }
 
 .page {
@@ -806,6 +808,10 @@ template {
   box-shadow: 0 0 0 2px #f2f5f7;
 }
 
+.top-banner__button-text--mobile {
+  display: none;
+}
+
 .advantages {
   padding: 119px 0 57px;
 }
@@ -1004,6 +1010,10 @@ template {
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 54px;
+}
+
+.services__mobile-title {
+  display: none;
 }
 
 .services__grid {
@@ -1246,12 +1256,6 @@ template {
 }
 
 .feedback-form button {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -1316,6 +1320,15 @@ template {
 @media (min-width: 768px) {
   .accordion__control {
     display: none;
+  }
+
+  .feedback-form button {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
   }
 }
 
@@ -1410,6 +1423,8 @@ template {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
+    left: 0;
+    top: 0;
   }
 
   .header__callback-button {
@@ -1435,17 +1450,36 @@ template {
     gap: 30px;
   }
 
+  .services-card__button {
+    right: 0;
+  }
+
   .feedback img {
     display: none;
+  }
+
+  .feedback-form form {
+    padding: 0;
   }
 }
 
 @media (max-width: 767px) {
+  .header__container {
+    padding: 15px 29px 20px 26px;
+  }
+
+  .header__contacts {
+    padding: 0;
+    margin-top: -3px;
+  }
+
   .header__logo-words {
     position: absolute;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
+    left: 0;
+    top: 0;
   }
 
   .header__logo img {
@@ -1453,26 +1487,73 @@ template {
     height: 35px;
   }
 
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .accordion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .top-banner {
+    min-height: 560px;
     padding-top: 150px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
     background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
   }
 
+  .top-banner__grid {
+    padding: 0 25px;
+  }
+
   .top-banner h2 {
     font-size: 36px;
     line-height: 42px;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
   }
 
   .top-banner p {
     font-size: 14px;
     line-height: 22px;
+    margin-left: -1px;
+    margin-bottom: 44px;
   }
 
   .top-banner a {
     font-size: 14px;
     line-height: 17px;
+    letter-spacing: 0.7px;
+    min-height: 40px;
+    padding: 12px 5px 5px 38px;
+  }
+
+  .top-banner__button-text {
+    display: none;
+  }
+
+  .top-banner__button-text--mobile {
+    display: inline;
+  }
+
+  .advantages {
+    padding-top: 49px;
+    padding-bottom: 30px;
+  }
+
+  .advantages__container {
+    padding: 0 25px;
   }
 
   .advantages__list {
@@ -1484,6 +1565,7 @@ template {
   .advantages-card h3 {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 10px;
   }
 
   .advantages-card p {
@@ -1494,12 +1576,176 @@ template {
   .advantages-card::before {
     width: 30px;
     height: 30px;
+    margin-bottom: 16px;
+  }
+
+  .advantages-card {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 31px 30px 35px;
+    min-height: 325px;
+  }
+
+  .advantages-card--time {
+    padding-bottom: 73px;
+  }
+
+  .advantages-card--suppliers {
+    padding-bottom: 54px;
+  }
+
+  .advantages-card--confidential::before {
+    margin-left: 0;
+    margin-bottom: 18px;
+  }
+
+  .advantages-card--confidential h3 {
+    margin-bottom: 13px;
+  }
+
+  .advantages-card--personal::before {
+    margin-bottom: 18px;
+  }
+
+  .advantages-card--personal h3 {
+    margin-bottom: 13px;
+  }
+
+  .about {
+    padding-top: 17px;
+    padding-bottom: 69px;
+  }
+
+  .about__wrapper {
+    padding: 0 25px;
   }
 
   .about__year {
+    position: absolute;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
+    left: 0;
+    top: 0;
+  }
+
+  .about p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 11px;
+  }
+
+  .about__button {
+    padding: 5px;
+    width: 160px;
+    min-height: 35px;
+  }
+
+  .about__text-container {
+    height: 259px;
+  }
+
+  .services {
+    padding-top: 46px;
+    padding-bottom: 86px;
+  }
+
+  .services__wrapper {
+    padding: 0 25px;
+  }
+
+  .services h2 {
+    display: none;
+  }
+
+  .services__mobile-title {
+    display: inline-block;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #ffffff;
+    max-width: 200px;
+    margin: 0 0 28px;
+  }
+
+  .services-card h3 {
+    font-size: 18px;
+    line-height: 30px;
+    top: 26px;
+    left: 30px;
+    max-width: 134px;
+  }
+
+  .services-card__button::before {
+    width: 4px;
+    height: 4px;
+  }
+
+  .services-card__button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback {
+    min-height: 750px;
+  }
+
+  .feedback__wrapper {
+    padding: 47px 25px 20px;
+  }
+
+  .feedback-form h2 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 7px;
+  }
+
+  .feedback-form p {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 34px;
+  }
+
+  .feedback-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 0;
+  }
+
+  .feedback-form__label--convention {
+    padding-top: 5px;
+    padding-left: 30px;
+  }
+
+  .feedback-form input[type="text"],
+  .feedback-form input[type="tel"] {
+    margin-bottom: 20px;
+  }
+
+  .feedback-form textarea {
+    min-height: 180px;
+    margin-bottom: 30px;
+  }
+
+  .feedback-form button {
+    width: 270px;
+    margin-bottom: 20px;
+  }
+
+  .feedback-form input[type="checkbox"] {
+    left: 5px;
+    top: 12px;
   }
 }
 
@@ -1686,10 +1932,6 @@ template {
     max-width: 148px;
   }
 
-  .services-card__button {
-    right: 0;
-  }
-
   .feedback {
     min-height: 580px;
   }
@@ -1709,10 +1951,6 @@ template {
 
   .feedback-form p {
     margin-bottom: 25px;
-  }
-
-  .feedback-form form {
-    padding: 0;
   }
 
   .feedback-form__label--convention {

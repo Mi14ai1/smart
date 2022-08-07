@@ -4,6 +4,11 @@
   @media #{$wide-vp} {
     padding-left: 20px;
   }
+
+  @media #{$narrow-vp} {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .accordion__control {

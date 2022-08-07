@@ -7,6 +7,11 @@
     padding-top: 55px;
     padding-bottom: 75px;
   }
+
+  @media #{$narrow-vp} {
+    padding-top: 46px;
+    padding-bottom: 86px;
+  }
 }
 
 .services__wrapper {
@@ -14,6 +19,10 @@
 
   @media #{$middle-vp} {
     padding: 0 50px;
+  }
+
+  @media #{$narrow-vp} {
+    padding: 0 25px;
   }
 }
 
@@ -27,6 +36,25 @@
 
   @media #{$middle-vp} {
     margin-bottom: 38px;
+  }
+
+  @media #{$narrow-vp} {
+    display: none;
+  }
+}
+
+.services__mobile-title {
+  display: none;
+
+  @media #{$narrow-vp} {
+    display: inline-block;
+    font-family: $ff-roboto-condensed;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 400;
+    color: $color-default-white;
+    max-width: 200px;
+    margin: 0 0 28px;
   }
 }
 
