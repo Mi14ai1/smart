@@ -18,6 +18,13 @@
   letter-spacing: 0.8px;
   color: $color-default-white;
   margin: 0 0 22px;
+
+  @media #{$narrow-vp} {
+    position: absolute;
+    transform: scale(0);
+    left: 0;
+    top: 0;
+  }
 }
 
 .navigation a {
@@ -41,5 +48,7 @@
 }
 
 .navigation__list + .navigation__list {
-  margin-top: 9px;
+  @media #{$narrow-vp} {
+    margin-top: 9px;
+  }
 }
