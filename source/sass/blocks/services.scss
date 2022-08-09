@@ -76,10 +76,19 @@
     row-gap: 20px;
   }
 
-  @media #{$not-wide-vp} {
+  @media #{$middle-vp} {
     grid-template-columns: 1fr;
     width: fit-content;
     margin: 0 auto;
+    gap: 30px;
+  }
+
+  @media #{$narrow-vp} {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-items: center;
     gap: 30px;
   }
 }
