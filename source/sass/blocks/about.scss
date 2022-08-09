@@ -90,7 +90,8 @@
   width: 180px;
 
   @media #{$middle-vp} {
-    margin-left: 175px;
+    display: block;
+    margin: 0 313px 0 auto;
   }
 
   @media #{$narrow-vp} {
@@ -116,7 +117,7 @@
   }
 }
 
-.about__show-text {
-  height: 600px;
+.about__text-container.about__show-text {
+  height: fit-content;
   overflow: initial;
 }

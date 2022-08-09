@@ -293,13 +293,13 @@ Smart Device</p>
           <div class="feedback-form">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <form action="https://echo.htmlacademy.ru/." method="post" class="feedback__form form">
+            <form action="https://echo.htmlacademy.ru/." method="post" class="feedback__form form" target="_blank">
               <label for="name" class="feedback-form__label">
-                <input id="name" name="name" type="text" placeholder="Имя" />
+                <input id="name" name="name" type="text" placeholder="Имя" title="введите свое имя" required />
                 <span class="visually-hidden">Имя</span>
               </label>
               <label for="phone" class="feedback-form__label">
-                <input id="phone" name="phone" type="tel" placeholder="Телефон" />
+                <input id="phone" name="phone" type="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{7}$" title="Введите номер телефона 10 цифр" required />
                 <span class="visually-hidden">Телефон</span>
               </label>
               <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
@@ -308,7 +308,7 @@ Smart Device</p>
               </label>
               <button type="submit" class="button form__submit">Задать вопрос</button>
               <label for="convention" class="feedback-form__label feedback-form__convention">
-                <input id="convention" type="checkbox" name="convention" />
+                <input id="convention" type="checkbox" name="convention" required />
                 <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
               </label>
             </form>
@@ -356,7 +356,7 @@ Smart Device</p>
         </div>
 
         <div class="accordion footer__accordion">
-          <button type="button" class="button accordion__control accordion__control--navigation accordion__control--hide-section"><span class="accordion__control-mark">Разделы сайта</span></button>
+          <button type="button" class="button accordion__control accordion__control--navigation"><span class="accordion__control-mark">Разделы сайта</span></button>
           <nav class="navigation footer__navigation accordion__section">
             <h2>Разделы сайта</h2>
             <ul class="navigation__list">
@@ -399,16 +399,16 @@ Smart Device</p>
 
     <div class="modal visually-hidden">
       <div class="feedback-form modal__feedback">
-        <button class="button modal__close-button"><span class="visually-hidden">Закрыть окно</span></button>
+        <button type="close" class="button modal__close-button"><span class="visually-hidden">Закрыть окно</span></button>
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
-        <form action="https://echo.htmlacademy.ru/." method="post" class="feedback__form modal__feedback-form">
+        <form action="https://echo.htmlacademy.ru/." method="post" target="_blank" class="feedback__form modal__feedback-form">
           <label for="modal-name" class="feedback-form__label">
-            <input id="modal-name" name="name" type="text" placeholder="Имя" />
+            <input id="modal-name" name="name" type="text" placeholder="Имя" required />
             <span class="visually-hidden">Имя</span>
           </label>
           <label for="modal-phone" class="feedback-form__label">
-            <input id="modal-phone" name="phone" type="tel" placeholder="Телефон" />
+            <input id="modal-phone" name="phone" type="tel" placeholder="Телефон" pattern="\+7\([0-9]{3}\)[0-9]{7}$" title="Введите номер телефона 10 цифр" required />
             <span class="visually-hidden">Телефон</span>
           </label>
           <textarea id="modal-question" name="question" placeholder="Ваш вопрос"></textarea>
@@ -417,7 +417,7 @@ Smart Device</p>
           </label>
           <button type="submit" class="button form__submit modal__feedback-submit">Отправить</button>
           <label for="modal-convention" class="feedback-form__label feedback-form__convention modal__feedback-convention">
-            <input id="modal-convention" type="checkbox" name="convention" />
+            <input id="modal-convention" type="checkbox" name="convention" required />
             <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
           </label>
         </form>
