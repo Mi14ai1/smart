@@ -13,6 +13,10 @@
     max-width: none;
     margin: 0;
   }
+
+  @media (max-width: 767px) and (min-width: 321px) {
+    margin: 0 auto;
+  }
 }
 
 .feedback-form h2 {
@@ -57,7 +61,13 @@
   }
 }
 
+.feedback-form span {
+  display: block;
+  width: 200px;
+}
+
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input::placeholder,
 .feedback-form textarea::placeholder {
   font-family: $ff-pt-mono;

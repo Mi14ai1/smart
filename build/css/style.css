@@ -433,7 +433,6 @@ template {
 }
 
 .page {
-  scroll-snap-align: top;
   scroll-behavior: smooth;
 }
 
@@ -462,7 +461,7 @@ template {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -646,6 +645,14 @@ template {
   padding: 5px;
 }
 
+.social a:hover {
+  opacity: 0.8;
+}
+
+.social a:active {
+  opacity: 0.3;
+}
+
 .social__list {
   display: -ms-grid;
   display: grid;
@@ -684,6 +691,14 @@ template {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+}
+
+.navigation a:hover {
+  opacity: 0.8;
+}
+
+.navigation a:active {
+  opacity: 0.3;
 }
 
 .navigation__list {
@@ -1052,8 +1067,10 @@ template {
   margin-bottom: 15px;
 }
 
-.about__show-text {
-  height: 600px;
+.about__text-container.about__show-text {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow: initial;
 }
 
@@ -1235,7 +1252,13 @@ template {
   margin: 0 0 35px;
 }
 
+.feedback-form span {
+  display: block;
+  width: 200px;
+}
+
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input::-webkit-input-placeholder,
 .feedback-form textarea::-webkit-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1246,6 +1269,7 @@ template {
 }
 
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input::-moz-placeholder,
 .feedback-form textarea::-moz-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1256,6 +1280,7 @@ template {
 }
 
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input:-ms-input-placeholder,
 .feedback-form textarea:-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1266,6 +1291,7 @@ template {
 }
 
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input::-ms-input-placeholder,
 .feedback-form textarea::-ms-input-placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1276,6 +1302,7 @@ template {
 }
 
 .feedback-form input,
+.feedback-form textarea,
 .feedback-form input::placeholder,
 .feedback-form textarea::placeholder {
   font-family: "PT Mono", "Arial", sans-serif;
@@ -1399,10 +1426,10 @@ template {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: rgba(3, 16, 27, 0.7);
   z-index: 11;
@@ -1639,6 +1666,10 @@ template {
     height: 20px;
   }
 
+  .navigation__list + .navigation__list {
+    margin-top: 9px;
+  }
+
   .advantages-card p {
     margin-bottom: 0;
   }
@@ -1691,7 +1722,7 @@ template {
   }
 
   .footer {
-    padding-bottom: 35px 0 35;
+    padding: 35px 0 35px;
   }
 
   .footer__wrapper {
@@ -1715,6 +1746,10 @@ template {
     padding-left: 37px;
   }
 
+  .navigation {
+    padding-bottom: 16px;
+  }
+
   .navigation h2 {
     position: absolute;
     -webkit-transform: scale(0);
@@ -1722,10 +1757,6 @@ template {
     transform: scale(0);
     left: 0;
     top: 0;
-  }
-
-  .navigation__list + .navigation__list {
-    margin-top: 9px;
   }
 
   .accordion {
@@ -1869,6 +1900,7 @@ template {
     box-sizing: border-box;
     padding: 31px 30px 35px;
     min-height: 325px;
+    max-width: 573px;
   }
 
   .advantages-card--time {
@@ -2187,7 +2219,8 @@ template {
   }
 
   .about__button {
-    margin-left: 175px;
+    display: block;
+    margin: 0 313px 0 auto;
   }
 
   .about__text-container {
@@ -2272,5 +2305,16 @@ template {
     background: no-repeat center/auto 52.5% url("../img/yearbackground-l@2x.jpg");
     -webkit-background-clip: text;
     background-clip: text;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 321px) {
+  .top-banner a {
+    text-align: center;
+    padding: 12px 38px 5px 38px;
+  }
+
+  .feedback-form {
+    margin: 0 auto;
   }
 }
