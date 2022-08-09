@@ -11,18 +11,12 @@
   }
 }
 
-.footer__wrapper {
+.footer__grid {
   padding: 0 30px;
   display: flex;
 
-  @media #{$middle-vp} {
+  @media #{$not-wide-vp} {
     flex-direction: column;
-    padding: 0 50px;
-  }
-
-  @media #{$narrow-vp} {
-    flex-direction: column;
-    padding: 0 25px;
   }
 }
 

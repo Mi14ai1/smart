@@ -39,14 +39,6 @@
   @media #{$wide-vp} {
     padding-left: 155px;
   }
-
-  @media #{$middle-vp} {
-    padding: 0 50px;
-  }
-
-  @media #{$narrow-vp} {
-    padding: 0 25px;
-  }
 }
 
 .top-banner h2,
@@ -157,6 +149,7 @@
 
     &--mobile {
       display: inline;
+      vertical-align: initial;
     }
   }
 }

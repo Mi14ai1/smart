@@ -1,4 +1,10 @@
 .about-year {
+  font-family: $ff-roboto-condensed;
+  font-size: 156px;
+  line-height: 220px;
+  font-weight: 700;
+  color: transparent;
+  margin: 0;
   width: min-content;
   transform: rotate(-90deg);
 
@@ -23,13 +29,4 @@
       background-clip: text;
     }
   }
-}
-
-.about-year p {
-  font-family: $ff-roboto-condensed;
-  font-size: 156px;
-  line-height: 220px;
-  font-weight: 700;
-  color: transparent;
-  margin: 0;
 }

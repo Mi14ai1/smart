@@ -14,18 +14,6 @@
   }
 }
 
-.services__wrapper {
-  padding: 0 30px;
-
-  @media #{$middle-vp} {
-    padding: 0 50px;
-  }
-
-  @media #{$narrow-vp} {
-    padding: 0 25px;
-  }
-}
-
 .services h2 {
   font-family: $ff-roboto-condensed;
   font-size: 36px;
@@ -48,6 +36,7 @@
 
   @media #{$narrow-vp} {
     display: inline-block;
+    vertical-align: initial;
     font-family: $ff-roboto-condensed;
     font-size: 28px;
     line-height: 40px;

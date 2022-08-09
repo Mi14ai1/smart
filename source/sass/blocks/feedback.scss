@@ -25,18 +25,6 @@
   }
 }
 
-.feedback__wrapper {
-  padding: 165px 40px 20px;
-
-  @media #{$middle-vp} {
-    padding: 45px 50px 20px;
-  }
-
-  @media #{$narrow-vp} {
-    padding: 47px 25px 20px;
-  }
-}
-
 .feedback img {
   position: absolute;
   top: 246px;
@@ -46,4 +34,3 @@
     display: none;
   }
 }
-

@@ -16,6 +16,7 @@
 .services-card h3 {
   position: absolute;
   display: inline-block;
+  vertical-align: initial;
   top: 47px;
   left: 40px;
   font-family: $ff-roboto-condensed;
@@ -80,6 +81,7 @@
 
 .services-card img {
   display: inline-block;
+  vertical-align: initial;
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -1,15 +1,14 @@
 .contact {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  gap: 15px;
   padding: 8px;
 
   &::before {
     content: "";
-    display: block;
+    display: inline-block;
+    vertical-align: initial;
     width: 21px;
     height: 20px;
     background: $color-deep-sky-blue;
+    margin-right: 10px;
 
     @media #{$not-wide-vp} {
       width: 20px;
@@ -24,9 +23,15 @@
   &--phone::before {
     mask: no-repeat center / cover url("../img/svg/contacts-sprite.svg#phone");
   }
+
+  &--phone {
+    transform: translateX(7px);
+  }
 }
 
 .contact span {
+  display: inline-block;
+  vertical-align: super;
   font-family: $ff-pt-mono;
   font-size: 16px;
   line-height: 18px;
