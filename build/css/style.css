@@ -1699,16 +1699,6 @@ template {
     margin-bottom: 0;
   }
 
-  .services__list {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 30px;
-  }
-
   .services-card__button {
     right: 0;
   }
@@ -2016,6 +2006,17 @@ template {
     margin: 0 0 28px;
   }
 
+  .services__list {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 100%;
+    justify-items: center;
+    gap: 30px;
+  }
+
   .services-card h3 {
     font-size: 18px;
     line-height: 30px;
@@ -2271,6 +2272,16 @@ template {
 
   .services h2 {
     margin-bottom: 38px;
+  }
+
+  .services__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 30px;
   }
 
   .services-card h3 {
