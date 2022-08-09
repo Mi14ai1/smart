@@ -39,20 +39,6 @@
   }
 }
 
-.about p {
-  font-family: $ff-pt-mono;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: $color-black-perl;
-  margin: 0 0 21px;
-
-  @media #{$narrow-vp} {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}
-
 .about h2 {
   font-family: $ff-roboto-condensed;
   font-size: 36px;
@@ -95,22 +81,10 @@
 }
 
 .about__text-container {
-  height: 240px;
-  overflow-y: hidden;
   margin-bottom: 15px;
 
   @media #{$middle-vp} {
-    height: 325px;
     max-width: 495px;
     margin-left: auto;
   }
-
-  @media #{$narrow-vp} {
-    height: 259px;
-  }
-}
-
-.about__text-container.about__show-text {
-  height: fit-content;
-  overflow: initial;
 }

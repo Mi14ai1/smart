@@ -432,6 +432,10 @@ template {
 }
 
 .wrapper--header {
+  padding: 30px 98px 35px 21px;
+}
+
+.wrapper--header-show-modal {
   padding: 30px 90px 35px 30px;
 }
 
@@ -514,9 +518,10 @@ template {
 .header__contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 224px 224px;
+  grid-template-columns: 224px 224px;
   gap: 21px;
+  padding-right: 13px;
   padding-top: 7px;
   margin-right: auto;
   margin-left: auto;
@@ -1058,15 +1063,6 @@ template {
   left: -38px;
 }
 
-.about p {
-  font-family: "PT Mono", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: #041827;
-  margin: 0 0 21px;
-}
-
 .about h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
@@ -1093,16 +1089,7 @@ template {
 }
 
 .about__text-container {
-  height: 240px;
-  overflow-y: hidden;
   margin-bottom: 15px;
-}
-
-.about__text-container.about__show-text {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  overflow: initial;
 }
 
 .about-year {
@@ -1118,6 +1105,15 @@ template {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+}
+
+.about-text p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #041827;
+  margin: 0 0 16px;
 }
 
 .services {
@@ -1496,7 +1492,8 @@ template {
 }
 
 .modal__feedback textarea {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
+  width: 100%;
 }
 
 .modal__feedback .modal__feedback-submit {
@@ -1558,6 +1555,10 @@ template {
 .modal .modal__close-button:focus-visible {
   -webkit-box-shadow: inset 0 0 0 2px #ffffff;
   box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.modal span {
+  width: 100%;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1641,8 +1642,8 @@ template {
     width: 100%;
     height: 100%;
     background: rgba(4, 24, 39, 0.5);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 87vw + 12px), 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 87vw + 12px), 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86vw + 7px), 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86vw + 7px), 0 100%);
     z-index: -1;
   }
 
@@ -1676,9 +1677,10 @@ template {
 
 @media (max-width: 1023px) {
   .header__contacts {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 9px;
     padding-top: 2px;
-    margin-right: 4px;
   }
 
   .header__contacts span {
@@ -1747,6 +1749,7 @@ template {
   .header__contacts {
     padding: 0;
     margin-top: -3px;
+    margin-right: 4px;
   }
 
   .header__logo img {
@@ -1969,11 +1972,6 @@ template {
     top: 0;
   }
 
-  .about p {
-    font-size: 14px;
-    line-height: 19px;
-  }
-
   .about h2 {
     font-size: 28px;
     line-height: 40px;
@@ -1986,8 +1984,9 @@ template {
     min-height: 35px;
   }
 
-  .about__text-container {
-    height: 259px;
+  .about-text p {
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .services {
@@ -2118,6 +2117,11 @@ template {
     padding: 20px 64px 25px 50px;
   }
 
+  .header__contacts {
+    margin-right: 0;
+    padding-right: 4px;
+  }
+
   .footer {
     padding: 50px 0 63px;
   }
@@ -2243,7 +2247,6 @@ template {
   }
 
   .about__text-container {
-    height: 325px;
     max-width: 495px;
     margin-left: auto;
   }
@@ -2332,7 +2335,7 @@ template {
 @media (max-width: 767px) and (min-width: 321px) {
   .top-banner a {
     text-align: center;
-    padding: 12px 38px 5px 38px;
+    padding: 12px 35px 5px;
   }
 
   .feedback-form {

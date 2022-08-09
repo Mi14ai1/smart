@@ -12,8 +12,8 @@ import {
   aboutText,
   mainForm,
   aboutButton,
-  ABOUTBUTTONTEXT,
   WIDEVIEWPORT,
+  MOBILEVIEWPORT,
   accordion,
   body
 } from './modules/data.js';
@@ -21,10 +21,21 @@ import {
 
 import {maskHandler} from './modules/inputmask.js';
 
-
+const hiddenText = aboutText.querySelector('.about-text--hidden');
+const mobileHiddenText = aboutText.querySelector('.about-text__mobile-hidden');
+const aboutOpenButtonText = aboutButton.querySelector('.about__open');
+const aboutCloseButtonText = aboutButton.querySelector('.about__close');
 const mainFormTel = mainForm.querySelector('input[type="tel"]');
 
-aboutText.classList.remove('about__show-text');
+hiddenText.classList.add('visually-hidden');
+aboutButton.classList.toggle('visually-hidden');
+
+
+if (MOBILEVIEWPORT > body.clientWidth) {
+  if (!mobileHiddenText.classList.contains('visually-hidden')) {
+    mobileHiddenText.classList.add('visually-hidden');
+  }
+}
 
 const mainFormTelHandler = (evt) => {
   evt.preventDefault();
@@ -50,17 +61,28 @@ mainForm.addEventListener('submit', (evt)=>{
 });
 
 aboutButton.addEventListener('click', ()=> {
-  aboutText.classList.toggle('about__show-text');
-  aboutButton.textContent = aboutButton.textContent === ABOUTBUTTONTEXT[0] ? ABOUTBUTTONTEXT[1] : ABOUTBUTTONTEXT[0];
+  hiddenText.classList.toggle('visually-hidden');
+  aboutCloseButtonText.classList.toggle('visually-hidden');
+  aboutOpenButtonText.classList.toggle('visually-hidden');
 });
 
 
 makeAccordion();
 
 window.addEventListener('resize', ()=> {
-  if (WIDEVIEWPORT <= body.clientWidth) {
+  const currentViewport = body.clientWidth;
+  if (WIDEVIEWPORT <= currentViewport) {
     callButton.removeEventListener('click', callButtonHandler);
     callButton.addEventListener('click', callButtonHandler);
+  }
+  if (MOBILEVIEWPORT > body.clientWidth) {
+    if (!mobileHiddenText.classList.contains('visually-hidden')) {
+      mobileHiddenText.classList.add('visually-hidden');
+    }
+  } else {
+    if (mobileHiddenText.classList.contains('visually-hidden')) {
+      mobileHiddenText.classList.remove('visually-hidden');
+    }
   }
   accordion.removeEventListener('click', accordionHandler);
   makeAccordion();
