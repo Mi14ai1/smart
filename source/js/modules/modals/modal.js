@@ -4,11 +4,10 @@ import {
   modalForm,
   closeModalButton
 } from '../data.js';
-import {getScrollWidth} from '../../utils/utils.js';
 import {maskHandler} from '../inputmask.js';
 
 const inputName = modal.querySelector('input[name="name"]');
-const modalScrollWidth = getScrollWidth();
+const header = body.querySelector('.header__container');
 
 const modalFormTel = modalForm.querySelector('input[type="tel"]');
 
@@ -39,7 +38,7 @@ const modalSubmitHandler = (evt) => {
 const showModal = () => {
   inputName.focus();
   modal.classList.remove('visually-hidden');
-  body.style.paddingRight = `${modalScrollWidth}px`;
+  header.classList.add('wrapper--header-show-modal');
   body.style.overflow = 'hidden';
   modal.addEventListener('click', modalHandler);
   modalForm.addEventListener('submit', modalSubmitHandler);
@@ -48,7 +47,7 @@ const showModal = () => {
 const closeModal = () => {
   modal.classList.add('visually-hidden');
   body.style.overflow = 'initial';
-  body.style.paddingRight = 0;
+  header.classList.remove('wrapper--header-show-modal');
   modalForm.reset();
   modalForm.removeEventListener('input', modalFormTelHandler);
   modal.removeEventListener('click', modalHandler);

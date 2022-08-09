@@ -1,5 +1,4 @@
 const REGION = '+7';
-const ABOUTBUTTONTEXT = ['Свернуть', 'Подробнее'];
 const HIDESECTION = 'accordion__control--hide-section';
 const MOBILEVIEWPORT = '768';
 const WIDEVIEWPORT = '1024';
@@ -36,7 +35,6 @@ export {
   mainForm,
   mainSubmitButton,
   aboutButton,
-  ABOUTBUTTONTEXT,
   HIDESECTION,
   MOBILEVIEWPORT,
   WIDEVIEWPORT,

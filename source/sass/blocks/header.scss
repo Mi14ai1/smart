@@ -15,16 +15,17 @@
 
 .header__contacts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 224px 224px;
   gap: 21px;
+  padding-right: 13px;
   padding-top: 7px;
   margin-right: auto;
   margin-left: auto;
 
   @media #{$not-wide-vp} {
+    grid-template-columns: 1fr 1fr;
     gap: 9px;
     padding-top: 2px;
-    margin-right: 4px;
 
     span {
       position: absolute;
@@ -34,9 +35,15 @@
     }
   }
 
+  @media #{$middle-vp} {
+    margin-right: 0;
+    padding-right: 4px;
+  }
+
   @media #{$narrow-vp} {
     padding: 0;
     margin-top: -3px;
+    margin-right: 4px;
   }
 }
 
