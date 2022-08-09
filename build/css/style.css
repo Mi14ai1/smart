@@ -436,6 +436,25 @@ template {
   scroll-behavior: smooth;
 }
 
+.page__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page__main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1345,6 +1364,10 @@ template {
   grid-row: 3 / 4;
 }
 
+.feedback-form__convention:hover {
+  cursor: pointer;
+}
+
 .feedback-form input[type="text"],
 .feedback-form input[type="tel"] {
   -webkit-box-sizing: border-box;
@@ -1423,6 +1446,8 @@ template {
 .feedback-form input[type="checkbox"]:hover {
   cursor: pointer;
   opacity: 0.8;
+  -webkit-box-shadow: 0 0 0 2px #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 .modal {

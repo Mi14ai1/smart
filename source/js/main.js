@@ -21,9 +21,18 @@ import {
 
 import {maskHandler} from './modules/inputmask.js';
 
-const inputs = document.querySelectorAll('input[type="tel"]');
+
+const mainFormTel = mainForm.querySelector('input[type="tel"]');
 
 aboutText.classList.remove('about__show-text');
+
+const mainFormTelHandler = (evt) => {
+  evt.preventDefault();
+  maskHandler(evt.target);
+};
+
+mainFormTel.addEventListener('input', mainFormTelHandler);
+
 
 const callButtonHandler = (evt) => {
   evt.preventDefault();
@@ -57,6 +66,3 @@ window.addEventListener('resize', ()=> {
   makeAccordion();
 
 });
-// разбить на два
-
-inputs.forEach((element) => element.addEventListener('input', maskHandler));

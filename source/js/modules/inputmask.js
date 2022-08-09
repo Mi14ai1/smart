@@ -17,10 +17,7 @@ const fillNumber = (val) => {
 
 let prev = '';
 
-const maskHandler = (evt) => {
-  evt.preventDefault();
-  const input = evt.target;
-
+const maskHandler = (input) => {
   prev = input.value.length > prev.length ? input.value : prev;
 
   if (prev.length <= input.value.length) {

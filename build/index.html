@@ -8,11 +8,11 @@
     <title>ProjectName</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
-    <header class="header">
+  <body class="page__body">
+    <header class="header page__header">
       <div class="wrapper header__container">
         <div class="logo header__logo">
-          <img src="img/logo.svg" alt="Smart Device умные технологии" />
+          <img src="img/logo.svg" alt="Smart Device умные технологии" width="55" height="55"/>
           <div class="logo__words header__logo-words">
             <p>Smart Device</p>
             <span>умные технологии</span>
@@ -33,7 +33,7 @@
         <button type="button" class="button header__callback-button callback-button"> Заказать звонок </button>
       </div>
     </header>
-    <main class="main">
+    <main class="main page__main">
       <h1 class="visually-hidden">Главная страница Smart Device</h1>
       <section class="top-banner">
         <div class="wrapper top-banner__grid">
@@ -176,9 +176,9 @@ Smart Device</p>
                       height="650"/>
                   </picture>
 
-                  <button class="button services-card__button" href="#">
+                  <div class="button services-card__button" >
                     <span class="visually-hidden">прейти на страницу производства</span>
-                  </button>
+                  </div>
                 </div>
               </a>
             </li>
@@ -220,9 +220,9 @@ Smart Device</p>
                       height="650"
                     />
                   </picture>
-                  <button class="button services-card__button" href="#">
+                  <div class="button services-card__button" >
                     <span class="visually-hidden">прейти на страницу монтажа</span>
-                  </button>
+                  </div>
                 </div>
               </a>
 
@@ -264,9 +264,9 @@ Smart Device</p>
                       width="350"
                       height="650"/>
                   </picture>
-                  <button class="button services-card__button" href="#">
+                  <div class="button services-card__button" >
                     <span class="visually-hidden">прейти на страницу комплектующих</span>
-                  </button>
+                  </div>
                 </div>
               </a>
             </li>
@@ -306,7 +306,7 @@ Smart Device</p>
               <label for="question" class="feedback-form__label">
                 <span class="visually-hidden">Ваш вопрос</span>
               </label>
-              <button type="submit" class="button form__submit">Задать вопрос</button>
+              <button type="submit" class="button feedback-form__submit">Задать вопрос</button>
               <label for="convention" class="feedback-form__label feedback-form__convention">
                 <input id="convention" type="checkbox" name="convention" required />
                 <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
@@ -317,7 +317,7 @@ Smart Device</p>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer page__footer">
       <div class="wrapper footer__wrapper">
         <div class="footer__container">
           <div class="logo footer__logo">
@@ -399,10 +399,10 @@ Smart Device</p>
 
     <div class="modal visually-hidden">
       <div class="feedback-form modal__feedback">
-        <button type="close" class="button modal__close-button"><span class="visually-hidden">Закрыть окно</span></button>
+        <button type="reset" class="button modal__close-button"><span class="visually-hidden">Закрыть окно</span></button>
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
-        <form action="https://echo.htmlacademy.ru/." method="post" target="_blank" class="feedback__form modal__feedback-form">
+        <form action="https://echo.htmlacademy.ru/." method="post" target="_blank" class="modal__feedback-form">
           <label for="modal-name" class="feedback-form__label">
             <input id="modal-name" name="name" type="text" placeholder="Имя" required />
             <span class="visually-hidden">Имя</span>
@@ -415,7 +415,7 @@ Smart Device</p>
           <label for="modal-question" class="feedback-form__label">
             <span class="visually-hidden">Ваш вопрос</span>
           </label>
-          <button type="submit" class="button form__submit modal__feedback-submit">Отправить</button>
+          <button type="submit" class="button feedback-form__submit modal__feedback-submit">Отправить</button>
           <label for="modal-convention" class="feedback-form__label feedback-form__convention modal__feedback-convention">
             <input id="modal-convention" type="checkbox" name="convention" required />
             <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
