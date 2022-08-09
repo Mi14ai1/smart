@@ -11,18 +11,6 @@
   }
 }
 
-.advantages__container {
-  padding: 0 28px 0 29px;
-
-  @media #{$middle-vp} {
-    padding: 0 49px;
-  }
-
-  @media #{$narrow-vp} {
-    padding: 0 25px;
-  }
-}
-
 .advantages__list {
   display: grid;
   grid-template-columns: 1fr 1fr;

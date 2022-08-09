@@ -27,4 +27,13 @@
 .logo__words {
   padding-top: 5px;
   margin-left: 15px;
+
+  &--modile-hide {
+    @media #{$narrow-vp} {
+      position: absolute;
+      transform: scale(0);
+      left: 0;
+      top: 0;
+    }
+  }
 }

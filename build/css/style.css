@@ -423,6 +423,18 @@ template {
   margin: 0 auto;
 }
 
+.wrapper--advantages {
+  padding: 0 28px 0 29px;
+}
+
+.wrapper--feedback {
+  padding: 165px 40px 20px;
+}
+
+.wrapper--header {
+  padding: 30px 90px 35px 30px;
+}
+
 .visually-hidden {
   position: absolute;
   -webkit-transform: scale(0);
@@ -494,10 +506,9 @@ template {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 30px 90px 35px 30px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .header__contacts {
@@ -505,9 +516,10 @@ template {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 27px;
+  gap: 21px;
   padding-top: 7px;
-  margin-right: -7px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header p {
@@ -568,22 +580,17 @@ template {
 }
 
 .contact {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: -webkit-min-content 1fr;
-  -ms-grid-columns: min-content 1fr;
-  grid-template-columns: -webkit-min-content 1fr;
-  grid-template-columns: min-content 1fr;
-  gap: 15px;
   padding: 8px;
 }
 
 .contact::before {
   content: "";
-  display: block;
+  display: inline-block;
+  vertical-align: initial;
   width: 21px;
   height: 20px;
   background: #00b2ff;
+  margin-right: 10px;
 }
 
 .contact--email::before {
@@ -596,7 +603,15 @@ template {
   mask: no-repeat center/cover url("../img/svg/contacts-sprite.svg#phone");
 }
 
+.contact--phone {
+  -webkit-transform: translateX(7px);
+  -ms-transform: translateX(7px);
+  transform: translateX(7px);
+}
+
 .contact span {
+  display: inline-block;
+  vertical-align: super;
   font-family: "PT Mono", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -626,7 +641,7 @@ template {
   background: #041827;
 }
 
-.footer__wrapper {
+.footer__grid {
   padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -932,10 +947,6 @@ template {
   padding: 119px 0 57px;
 }
 
-.advantages__container {
-  padding: 0 28px 0 29px;
-}
-
 .advantages__list {
   display: -ms-grid;
   display: grid;
@@ -1032,10 +1043,11 @@ template {
 }
 
 .about {
+  position: relative;
   padding: 61px 0 100px;
 }
 
-.about__wrapper {
+.about__grid {
   position: relative;
   min-height: 320px;
 }
@@ -1094,6 +1106,12 @@ template {
 }
 
 .about-year {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 156px;
+  line-height: 220px;
+  font-weight: 700;
+  color: transparent;
+  margin: 0;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -1102,23 +1120,10 @@ template {
   transform: rotate(-90deg);
 }
 
-.about-year p {
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 156px;
-  line-height: 220px;
-  font-weight: 700;
-  color: transparent;
-  margin: 0;
-}
-
 .services {
   padding: 65px 0 140px;
   line-height: 0;
   background: #041827;
-}
-
-.services__wrapper {
-  padding: 0 30px;
 }
 
 .services h2 {
@@ -1177,6 +1182,7 @@ template {
 .services-card h3 {
   position: absolute;
   display: inline-block;
+  vertical-align: initial;
   top: 47px;
   left: 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1217,6 +1223,7 @@ template {
 
 .services-card img {
   display: inline-block;
+  vertical-align: initial;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1228,10 +1235,6 @@ template {
   min-height: 840px;
   background: #00b2ff;
   z-index: 0;
-}
-
-.feedback__wrapper {
-  padding: 165px 40px 20px;
 }
 
 .feedback img {
@@ -1580,6 +1583,10 @@ template {
 }
 
 @media (min-width: 1024px) {
+  .wrapper--services {
+    padding: 0 30px;
+  }
+
   .navigation {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -1611,7 +1618,7 @@ template {
     padding-left: 46px;
   }
 
-  .about__wrapper {
+  .about__grid {
     padding-left: 280px;
   }
 
@@ -1669,8 +1676,9 @@ template {
 
 @media (max-width: 1023px) {
   .header__contacts {
-    padding-top: 2px;
     gap: 9px;
+    padding-top: 2px;
+    margin-right: 4px;
   }
 
   .header__contacts span {
@@ -1689,6 +1697,13 @@ template {
   .contact::before {
     width: 20px;
     height: 20px;
+  }
+
+  .footer__grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .navigation__list + .navigation__list {
@@ -1713,7 +1728,19 @@ template {
 }
 
 @media (max-width: 767px) {
-  .header__container {
+  .wrapper {
+    padding: 0 25px;
+  }
+
+  .wrapper--advantages {
+    padding: 0 25px;
+  }
+
+  .wrapper--feedback {
+    padding: 47px 25px 20px;
+  }
+
+  .wrapper--header {
     padding: 15px 29px 20px 26px;
   }
 
@@ -1722,7 +1749,12 @@ template {
     margin-top: -3px;
   }
 
-  .header__logo-words {
+  .header__logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo__words--modile-hide {
     position: absolute;
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -1731,21 +1763,8 @@ template {
     top: 0;
   }
 
-  .header__logo img {
-    width: 35px;
-    height: 35px;
-  }
-
   .footer {
     padding: 35px 0 35px;
-  }
-
-  .footer__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0 25px;
   }
 
   .footer__logo {
@@ -1843,10 +1862,6 @@ template {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-s.jpg"), #041827;
   }
 
-  .top-banner__grid {
-    padding: 0 25px;
-  }
-
   .top-banner h2 {
     font-size: 36px;
     line-height: 42px;
@@ -1875,15 +1890,12 @@ template {
 
   .top-banner__button-text--mobile {
     display: inline;
+    vertical-align: initial;
   }
 
   .advantages {
     padding-top: 49px;
     padding-bottom: 30px;
-  }
-
-  .advantages__container {
-    padding: 0 25px;
   }
 
   .advantages__list {
@@ -1948,10 +1960,6 @@ template {
     padding-bottom: 69px;
   }
 
-  .about__wrapper {
-    padding: 0 25px;
-  }
-
   .about__year {
     position: absolute;
     -webkit-transform: scale(0);
@@ -1987,16 +1995,13 @@ template {
     padding-bottom: 86px;
   }
 
-  .services__wrapper {
-    padding: 0 25px;
-  }
-
   .services h2 {
     display: none;
   }
 
   .services__mobile-title {
     display: inline-block;
+    vertical-align: initial;
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 28px;
     line-height: 40px;
@@ -2037,10 +2042,6 @@ template {
 
   .feedback {
     min-height: 750px;
-  }
-
-  .feedback__wrapper {
-    padding: 47px 25px 20px;
   }
 
   .feedback-form h2 {
@@ -2101,20 +2102,24 @@ template {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .header__container {
+  .wrapper {
+    padding: 0 50px;
+  }
+
+  .wrapper--advantages {
+    padding: 0 49px;
+  }
+
+  .wrapper--feedback {
+    padding: 45px 50px 20px;
+  }
+
+  .wrapper--header {
     padding: 20px 64px 25px 50px;
   }
 
   .footer {
     padding: 50px 0 63px;
-  }
-
-  .footer__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 0 50px;
   }
 
   .footer__accordion {
@@ -2157,10 +2162,6 @@ template {
     background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%), no-repeat center/cover url("../img/main/topbackground-m.jpg"), #041827;
   }
 
-  .top-banner__grid {
-    padding: 0 50px;
-  }
-
   .top-banner h2 {
     font-size: 64px;
     line-height: 75px;
@@ -2180,10 +2181,6 @@ template {
 
   .advantages {
     padding: 80px 0 44px;
-  }
-
-  .advantages__container {
-    padding: 0 49px;
   }
 
   .advantages__list {
@@ -2235,10 +2232,6 @@ template {
     padding: 30px 0 80px;
   }
 
-  .about__wrapper {
-    padding: 0 50px;
-  }
-
   .about__year {
     top: 57px;
     left: -21px;
@@ -2266,10 +2259,6 @@ template {
     padding-bottom: 75px;
   }
 
-  .services__wrapper {
-    padding: 0 50px;
-  }
-
   .services h2 {
     margin-bottom: 38px;
   }
@@ -2292,10 +2281,6 @@ template {
 
   .feedback {
     min-height: 580px;
-  }
-
-  .feedback__wrapper {
-    padding: 45px 50px 20px;
   }
 
   .feedback-form {

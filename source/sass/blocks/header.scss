@@ -10,28 +10,21 @@
 .header__container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  padding: 30px 90px 35px 30px;
-
-  @media #{$middle-vp} {
-    padding: 20px 64px 25px 50px;
-  }
-
-  @media #{$narrow-vp} {
-    padding: 15px 29px 20px 26px;
-  }
+  justify-content: flex-start;
 }
 
 .header__contacts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 27px;
+  gap: 21px;
   padding-top: 7px;
-  margin-right: -7px;
+  margin-right: auto;
+  margin-left: auto;
 
   @media #{$not-wide-vp} {
-    padding-top: 2px;
     gap: 9px;
+    padding-top: 2px;
+    margin-right: 4px;
 
     span {
       position: absolute;
@@ -44,15 +37,6 @@
   @media #{$narrow-vp} {
     padding: 0;
     margin-top: -3px;
-  }
-}
-
-.header__logo-words {
-  @media #{$narrow-vp} {
-    position: absolute;
-    transform: scale(0);
-    left: 0;
-    top: 0;
   }
 }
 
