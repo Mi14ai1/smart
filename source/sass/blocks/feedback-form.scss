@@ -120,6 +120,10 @@
     padding-top: 5px;
     padding-left: 30px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .feedback-form input[type="text"],
@@ -217,7 +221,9 @@
   &:hover {
     cursor: pointer;
     opacity: 0.8;
+    box-shadow: 0 0 0 2px $color-default-white;
   }
+
 
   @media #{$middle-vp} {
     left: 0;

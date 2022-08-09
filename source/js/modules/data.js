@@ -15,7 +15,7 @@ const modalSubmitButton = modalForm.querySelector('.modal__feedback-submit');
 const checkbox = modalForm.querySelector('input[type="checkbox"]');
 const aboutText = document.querySelector('.about__text-container');
 const mainForm = body.querySelector('.feedback__form');
-const mainSubmitButton = mainForm.querySelector('.form__submit');
+const mainSubmitButton = mainForm.querySelector('.feedback-form__submit');
 const about = body.querySelector('.about');
 const aboutButton = about.querySelector('.about__button');
 const accordionControls = body.querySelectorAll('.accordion__control');
