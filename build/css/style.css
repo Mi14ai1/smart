@@ -1623,10 +1623,18 @@ template {
     padding-left: 280px;
   }
 
+  .about__text-container {
+    margin-bottom: 39px;
+  }
+
   .about-year {
     background: no-repeat center/auto auto url("../img/yearbackground-l.jpg");
     -webkit-background-clip: text;
     background-clip: text;
+  }
+
+  .about-text p {
+    margin-bottom: 21px;
   }
 
   .services__list {
@@ -1714,6 +1722,10 @@ template {
 
   .advantages-card p {
     margin-bottom: 0;
+  }
+
+  .services__item {
+    width: 100%;
   }
 
   .services-card__button {
@@ -1885,6 +1897,7 @@ template {
     letter-spacing: 0.7px;
     min-height: 40px;
     padding: 12px 5px 5px 38px;
+    max-width: 270px;
   }
 
   .top-banner__button-text {
@@ -1902,7 +1915,6 @@ template {
   }
 
   .advantages__list {
-    justify-items: center;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1930,7 +1942,7 @@ template {
     box-sizing: border-box;
     padding: 31px 30px 35px;
     min-height: 325px;
-    max-width: 573px;
+    max-width: 100%;
   }
 
   .advantages-card--time {
@@ -2011,7 +2023,7 @@ template {
   }
 
   .services__list {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -2226,7 +2238,6 @@ template {
   }
 
   .advantages-card--time {
-    max-width: 322px;
     padding-top: 41px;
     padding-bottom: 53px;
     margin-top: -1px;
@@ -2249,12 +2260,17 @@ template {
   .about__text-container {
     max-width: 495px;
     margin-left: auto;
+    margin-bottom: -3px;
   }
 
   .about-year {
     background: no-repeat center/auto auto url("../img/yearbackground-l.jpg");
     -webkit-background-clip: text;
     background-clip: text;
+  }
+
+  .about-text p {
+    margin-bottom: 19px;
   }
 
   .services {
@@ -2269,9 +2285,7 @@ template {
   .services__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
     gap: 30px;
   }

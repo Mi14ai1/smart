@@ -6,8 +6,16 @@
   color: $color-black-perl;
   margin: 0 0 16px;
 
+  @media #{$wide-vp} {
+    margin-bottom: 21px;
+  }
+
   @media #{$narrow-vp} {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  @media #{$middle-vp} {
+    margin-bottom: 19px;
   }
 }
