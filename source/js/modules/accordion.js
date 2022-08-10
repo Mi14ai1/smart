@@ -34,7 +34,6 @@ const makeAccordion = () => {
 
     accordion.addEventListener('click', accordionHandler);
   }
-
 };
 
 export {

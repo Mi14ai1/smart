@@ -25,7 +25,6 @@
   }
 
   @media #{$narrow-vp} {
-    justify-items: center;
     grid-template-columns: 1fr;
     gap: 30px;
   }
